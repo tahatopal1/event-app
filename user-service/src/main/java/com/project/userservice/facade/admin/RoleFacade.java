@@ -1,4 +1,4 @@
-package com.project.userservice.facade;
+package com.project.userservice.facade.admin;
 
 import com.project.userservice.dto.RoleDTO;
 import com.project.userservice.entity.Role;
@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
@@ -30,12 +29,12 @@ public class RoleFacade {
     }
 
     public RoleDTO saveRole(RoleDTO roleDTO){
-        Role role = roleMapper.reverseMap(roleDTO);
+        Role role = roleMapper.mapDto(roleDTO);
         return saveAndMap(role);
     }
 
     public RoleDTO updateRole(Long id, RoleDTO roleDTO){
-        Role savingRole = roleMapper.reverseMap(roleDTO);
+        Role savingRole = roleMapper.mapDto(roleDTO);
         savingRole.setId(id);
         return saveAndMap(savingRole);
     }

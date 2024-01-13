@@ -31,7 +31,7 @@ public class UserMapper implements ObjectMapper<User, UserDTO> {
     }
 
     @Override
-    public User reverseMap(UserDTO userDTO) {
+    public User mapDto(UserDTO userDTO) {
         return User.builder()
                 .username(userDTO.getUsername())
                 .password(passwordEncoder.encode(userDTO.getPassword()))

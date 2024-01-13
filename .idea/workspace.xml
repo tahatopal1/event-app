@@ -4,7 +4,97 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cf7a5f8-e8bb-485f-ad85-facee903737e" name="Changes" comment="changes version 0.0.5" />
+    <list default="true" id="2cf7a5f8-e8bb-485f-ad85-facee903737e" name="Changes" comment="changes version 0.0.5">
+      <change afterPath="$PROJECT_DIR$/.idea/Event App.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/EventServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/constants/ApplicationConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/constants/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/dto/EventDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/entity/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/enums/EventType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/facade/EventFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/filter/JWTTokenValidatorFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/mapper/EventMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/mapper/ObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/repository/EventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/service/EventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/service/EventServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice/util/GeneralUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-service/src/test/java/com/project/eventservice/EventServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/TicketServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/client/EventClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/constants/ApplicationConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/constants/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/controller/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/controller/admin/TicketAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/dto/TicketDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/dto/TicketFilterDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/entity/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/facade/TicketFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/filter/AutomationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/filter/JWTTokenValidatorFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/mapper/ObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/mapper/TicketMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/repository/TicketCustomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/repository/TicketCustomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/repository/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/service/TicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/service/TicketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice/util/GeneralUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket-service/src/test/java/com/project/ticketservice/TicketServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/bootstrap/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/config/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/constants/ApplicationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/constants/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/constants/SecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/filter/JWTTokenGeneratorFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/filter/JWTTokenGeneratorFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/config/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/constants/ApplicationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/constants/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/constants/SecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/admin/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/admin/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/admin/UserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/controller/admin/UserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/dto/RoleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/dto/RoleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/RoleFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/admin/RoleFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/UserAdminFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/admin/UserAdminFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/UserFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/facade/UserFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/filter/JWTTokenValidatorFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/filter/JWTTokenValidatorFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/ObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/ObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +104,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Dockerfile" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,12 +119,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tahatopal1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tahatopal1&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -66,13 +159,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;version-0.0.5&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tahatopal/Documents/Event App&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tahatopal/Documents/Projects/Event App/ticket-service/src/main/java/com/project/ticketservice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -81,16 +175,26 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.ticketservice.mapper" />
+      <recent name="com.project.ticketservice.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ticket-service/src/main/java/com/project/ticketservice" />
+      <recent name="$PROJECT_DIR$/event-service/src/main/java/com/project/eventservice" />
       <recent name="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice" />
       <recent name="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/repository" />
       <recent name="$PROJECT_DIR$/auth-service/src/main/java/com/project/authservice/service" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.project.authservice.controller" />
-      <recent name="com.project.userservice.config" />
-      <recent name="com.project.userservice.constants" />
-      <recent name="com.project.userservice.controller" />
+      <recent name="com.project.ticketservice.controller.admin" />
+      <recent name="com.project.ticketservice.filter" />
+      <recent name="com.project.ticketservice.mapper" />
+      <recent name="com.project.eventservice.mapper" />
+      <recent name="com.project.eventservice.constants" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,13 +225,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EventServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="event-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.eventservice.EventServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ticket-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.ticketservice.TicketServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="bootstrap" />
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.userservice.UserServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.EventServiceApplication" />
+      <item itemvalue="Spring Boot.TicketServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -149,6 +274,14 @@
       <workItem from="1702116883854" duration="25967000" />
       <workItem from="1702762220074" duration="125000" />
       <workItem from="1702762382952" duration="941000" />
+      <workItem from="1702765909433" duration="46000" />
+      <workItem from="1702766119741" duration="14298000" />
+      <workItem from="1702837404042" duration="79741000" />
+      <workItem from="1703877095132" duration="599000" />
+      <workItem from="1703962113776" duration="39578000" />
+      <workItem from="1704307969964" duration="33722000" />
+      <workItem from="1704984844141" duration="88000" />
+      <workItem from="1705052283001" duration="813000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <option name="closed" value="true" />
@@ -225,14 +358,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.1.5/spring-security-web-6.1.5.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.class</url>
-          <line>79</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.1.5/spring-security-web-6.1.5.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.class</url>
-          <line>69</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/user-service/src/main/java/com/project/userservice/filter/JWTTokenValidatorFilter.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

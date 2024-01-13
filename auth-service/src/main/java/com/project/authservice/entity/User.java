@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class    User implements UserDetails {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,7 +54,7 @@ public class    User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.roles
                 .stream()
-                .map(role -> new SimpleGrantedAuthority("ROLE_".concat(role.getCode())))
+                .map(role -> new SimpleGrantedAuthority("ROLE_".concat(role.getName())))
                 .collect(Collectors.toSet());
     }
 

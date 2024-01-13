@@ -11,17 +11,15 @@ public class RoleMapper implements ObjectMapper<Role, RoleDTO> {
         return RoleDTO.builder()
                 .id(role.getId())
                 .name(role.getName())
-                .code(role.getCode())
                 .description(role.getDescription())
                 .build();
     }
 
     @Override
-    public Role reverseMap(RoleDTO roleDTO) {
+    public Role mapDto(RoleDTO roleDTO) {
         return Role.builder()
                 .id(roleDTO.getId())
                 .name(roleDTO.getName())
-                .code(roleDTO.getCode())
                 .description(roleDTO.getDescription())
                 .build();
     }

@@ -1,4 +1,4 @@
-package com.project.userservice.facade;
+package com.project.userservice.facade.admin;
 
 import com.project.userservice.dto.UserDTO;
 import com.project.userservice.entity.Role;
@@ -7,7 +7,6 @@ import com.project.userservice.mapper.UserMapper;
 import com.project.userservice.service.RoleService;
 import com.project.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -33,12 +32,12 @@ public class UserAdminFacade {
     }
 
     public UserDTO saveUser(UserDTO userDTO){
-        User user = userMapper.reverseMap(userDTO);
+        User user = userMapper.mapDto(userDTO);
         return saveAndMap(user);
     }
 
     public UserDTO updateUser(Long id, UserDTO userDTO) {
-        User savingUser = userMapper.reverseMap(userDTO);
+        User savingUser = userMapper.mapDto(userDTO);
         userService.findUser(id); // Controlling if it exists
         savingUser.setId(id);
         return saveAndMap(savingUser);

@@ -1,10 +1,9 @@
 package com.project.userservice.controller.admin;
 
 import com.project.userservice.dto.RoleDTO;
-import com.project.userservice.facade.RoleFacade;
+import com.project.userservice.facade.admin.RoleFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,7 +43,6 @@ public class RoleController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteRole(@PathVariable("id") Long id){
         roleFacade.deleteRole(id);
-        ResponseEntity.noContent().build();
     }
 
 }

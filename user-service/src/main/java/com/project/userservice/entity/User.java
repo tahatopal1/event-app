@@ -40,6 +40,7 @@ public class User implements UserDetails {
     private String surname;
 
     @Column(name = "enabled")
+    @Builder.Default
     private Boolean enabled = true;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
@@ -54,7 +55,7 @@ public class User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.roles
                 .stream()
-                .map(role -> new SimpleGrantedAuthority("ROLE_".concat(role.getCode())))
+                .map(role -> new SimpleGrantedAuthority("ROLE_".concat(role.getName())))
                 .collect(Collectors.toSet());
     }
 

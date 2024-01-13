@@ -1,9 +1,7 @@
 package com.project.userservice.controller;
 
 import com.project.userservice.dto.UserDTO;
-import com.project.userservice.facade.UserAdminFacade;
 import com.project.userservice.facade.UserFacade;
-import com.project.userservice.util.GeneralUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

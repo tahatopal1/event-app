@@ -1,4 +1,4 @@
-package com.project.userservice.config;
+package com.project.userservice.constants;
 
 import java.util.Set;
 

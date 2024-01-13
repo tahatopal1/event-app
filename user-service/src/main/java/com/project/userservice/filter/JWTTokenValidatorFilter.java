@@ -1,6 +1,6 @@
 package com.project.userservice.filter;
 
-import com.project.userservice.config.ApplicationConstants;
+import com.project.userservice.constants.ApplicationConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

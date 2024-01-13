@@ -36,7 +36,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/admin/**").hasRole("STRONG")
                         .requestMatchers("/api/v1/**").hasAnyRole("WEAK", "STRONG")
                         .requestMatchers("/signup").permitAll()
-                        .anyRequest().authenticated())
+                        .anyRequest().denyAll())
                 .httpBasic(Customizer.withDefaults())
                 .authenticationProvider(authenticationProvider())
                 .build();

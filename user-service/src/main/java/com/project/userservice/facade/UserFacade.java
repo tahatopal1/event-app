@@ -26,9 +26,10 @@ public class UserFacade {
 
     public UserDTO updateUser(UserDTO userDTO) {
         User user = extractUser();
-        User savingUser = userMapper.reverseMap(userDTO);
+        User savingUser = userMapper.mapDto(userDTO);
         savingUser.setId(user.getId());
-        User savedUser = userService.saveUser(user);
+        savingUser.setRoles(user.getRoles()); // Protect roles
+        User savedUser = userService.saveUser(savingUser);
         return userMapper.map(savedUser);
     }
 

@@ -1,6 +1,7 @@
 package com.project.authservice.filter;
 
-import com.project.authservice.config.ApplicationConstants;
+import com.project.authservice.constants.ApplicationConstants;
+import com.project.authservice.entity.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.FilterChain;
@@ -25,22 +26,23 @@ public class JWTTokenGeneratorFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (Objects.nonNull(authentication)){
-            SecretKey key = Keys.hmacShaKeyFor(JWT_KEY.getBytes(StandardCharsets.UTF_8));
-            String jwt = Jwts.builder()
-                    .setIssuer(ISSUER)
-                    .setSubject(SUBJECT)
-                    .claim(CLAIM_USERNAME, authentication.getName())
-                    .claim(CLAIM_ROLE, authentication.getAuthorities()
-                            .stream()
-                            .map(GrantedAuthority::getAuthority)
-                            .collect(Collectors.joining(",")))
-                    .setIssuedAt(new Date())
-                    .setExpiration(new Date(new Date().getTime() + 300000000))
-                    .signWith(key)
-                    .compact();
-            response.setHeader(AUTH_HEADER, jwt);
-        }
+        Object principal = authentication.getPrincipal();
+        User user = (User) principal;
+        SecretKey key = Keys.hmacShaKeyFor(JWT_KEY.getBytes(StandardCharsets.UTF_8));
+        String jwt = Jwts.builder()
+                .setIssuer(ISSUER)
+                .setSubject(SUBJECT)
+                .claim(CLAIM_USERNAME, authentication.getName())
+                .claim(CLAIM_ID, user.getId())
+                .claim(CLAIM_ROLE, authentication.getAuthorities()
+                        .stream()
+                        .map(GrantedAuthority::getAuthority)
+                        .collect(Collectors.joining(",")))
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(new Date().getTime() + 300000000))
+                .signWith(key)
+                .compact();
+        response.setHeader(AUTH_HEADER, jwt);
         filterChain.doFilter(request, response);
     }
 
