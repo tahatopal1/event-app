@@ -3,9 +3,10 @@ package com.project.eventservice.service;
 import com.project.eventservice.entity.Event;
 import com.project.eventservice.repository.EventRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -15,8 +16,8 @@ public class EventServiceImpl implements EventService {
     private final EventRepository eventRepository;
 
     @Override
-    public List<Event> findAllEvents() {
-        return eventRepository.findAll();
+    public Page<Event> findAllEvents(Pageable pageable) {
+        return eventRepository.findAll(pageable);
     }
 
     @Override

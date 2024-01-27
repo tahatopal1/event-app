@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/ticket")
+@RequestMapping("/api/v1/tickets")
 public class TicketController {
 
     private final TicketFacade ticketFacade;
@@ -26,7 +26,7 @@ public class TicketController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public TicketDTO getTicket(@PathVariable("id") Long id){
-        return ticketFacade.findTicket(id);
+        return ticketFacade.findTicketForUser(id);
     }
 
     @PostMapping

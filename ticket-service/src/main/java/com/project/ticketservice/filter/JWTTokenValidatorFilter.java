@@ -48,7 +48,7 @@ public class JWTTokenValidatorFilter extends OncePerRequestFilter {
 
                 String username = String.valueOf(claims.get(CLAIM_USERNAME));
                 String userId = String.valueOf(claims.get(CLAIM_ID));
-                request.setAttribute("userId", userId);
+                request.setAttribute("id", userId);
 
                 List<SimpleGrantedAuthority> authorities = extractAuthorities(claims);
 

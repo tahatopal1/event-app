@@ -44,12 +44,12 @@ public class TicketCustomRepositoryImpl implements TicketCustomRepository{
         }
 
         if (ticketFilter.getEventId() != null) {
-            queryBuilder.append(" AND t.event_id = :eventId");
+            queryBuilder.append(" AND t.eventId = :eventId");
             parameters.put("eventId", ticketFilter.getEventId());
         }
 
         if (ticketFilter.getUserId() != null) {
-            queryBuilder.append(" AND t.user_id = :userId");
+            queryBuilder.append(" AND t.userId = :userId");
             parameters.put("userId", ticketFilter.getUserId());
         }
 
@@ -57,6 +57,10 @@ public class TicketCustomRepositoryImpl implements TicketCustomRepository{
 
         for (Map.Entry<String, Object> entry : parameters.entrySet()) {
             query.setParameter(entry.getKey(), entry.getValue());
+        }
+
+        if (ticketFilter.getPage() < 1) {
+            ticketFilter.setPage(1);
         }
 
         query.setFirstResult((ticketFilter.getPage() - 1) * ticketFilter.getSize());

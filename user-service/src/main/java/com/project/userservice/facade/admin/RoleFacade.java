@@ -34,6 +34,7 @@ public class RoleFacade {
     }
 
     public RoleDTO updateRole(Long id, RoleDTO roleDTO){
+        findRole(id); // control if role exists
         Role savingRole = roleMapper.mapDto(roleDTO);
         savingRole.setId(id);
         return saveAndMap(savingRole);

@@ -18,18 +18,19 @@ public class EventClient {
 
     private final RestTemplate restTemplate;
 
-    public void decreaseAmount(Long userId, Integer count) {
+    public void decreaseAmount(Long eventId, Integer count) {
         String automationJWT = GeneralUtil.getAttributeFromRequest(AUTOMATION_KEY);
 
         Map<String, String> params = new HashMap<>();
-        params.put("id", String.valueOf(userId));
+        params.put("id", String.valueOf(eventId));
         params.put("paramValue", String.valueOf(count));
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(automationJWT);
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<?> response = restTemplate.exchange(EVENT_SERVICE_URL, HttpMethod.PUT, entity, Void.class, params);
+        ResponseEntity<Void> response = restTemplate.exchange(EVENT_SERVICE_URL, HttpMethod.PUT, entity, Void.class, eventId, count);
+
         if (!response.getStatusCode().is2xxSuccessful()) {
             throw new RuntimeException("Error: decreasing is not possible");
         }

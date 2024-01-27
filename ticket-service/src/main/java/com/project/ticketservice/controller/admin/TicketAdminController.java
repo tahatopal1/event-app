@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/admin/ticket")
+@RequestMapping("/api/v1/admin/tickets")
 public class TicketAdminController {
 
     private final TicketFacade ticketFacade;

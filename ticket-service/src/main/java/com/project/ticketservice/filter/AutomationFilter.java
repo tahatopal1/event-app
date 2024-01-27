@@ -39,11 +39,12 @@ public class AutomationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String automationJWT = this.authenticate();
         request.setAttribute(AUTOMATION_KEY, automationJWT);
+        filterChain.doFilter(request, response);
     }
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-        return request.getServletPath().contains("/decrease");
+        return !request.getMethod().equals("POST");
     }
 
     private String authenticate() {

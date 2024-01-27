@@ -1,12 +1,12 @@
 package com.project.eventservice.service;
 
 import com.project.eventservice.entity.Event;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface EventService {
 
-    List<Event> findAllEvents();
+    Page<Event> findAllEvents(Pageable pageable);
 
     Event findEvent(Long id);
 

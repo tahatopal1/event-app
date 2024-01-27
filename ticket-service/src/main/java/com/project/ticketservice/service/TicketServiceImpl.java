@@ -29,6 +29,15 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
+    public Ticket getTicketForUser(Long id, Long userId) {
+        Optional<Ticket> ticketOpt = ticketRepository.findByIdAndUserId(id, userId);
+        if (ticketOpt.isEmpty()) {
+            throw new RuntimeException(String.format("There's no ticket with id: %s and userId: %s", id, userId));
+        }
+        return ticketOpt.get();
+    }
+
+    @Override
     public Ticket saveTicket(Ticket ticket) {
         return ticketRepository.save(ticket);
     }

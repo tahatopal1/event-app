@@ -37,8 +37,8 @@ public class UserAdminFacade {
     }
 
     public UserDTO updateUser(Long id, UserDTO userDTO) {
+        userService.findUser(id); // control if it exists
         User savingUser = userMapper.mapDto(userDTO);
-        userService.findUser(id); // Controlling if it exists
         savingUser.setId(id);
         return saveAndMap(savingUser);
     }

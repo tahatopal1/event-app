@@ -22,7 +22,6 @@ public class Role {
     @Column(nullable = false, name = "_name", unique = true)
     private String name;
 
-
     @Column(nullable = false, name = "_description")
     private String description;
 

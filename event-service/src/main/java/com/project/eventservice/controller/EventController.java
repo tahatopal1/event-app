@@ -3,6 +3,8 @@ package com.project.eventservice.controller;
 import com.project.eventservice.dto.EventDTO;
 import com.project.eventservice.facade.EventFacade;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -18,14 +20,16 @@ public class EventController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    @PreAuthorize("hasAnyRole('ROLE_STRONG, ROLE_WEAK')")
-    public List<EventDTO> getAllEvents(){
-        return eventFacade.findAllEvents();
+    @PreAuthorize("hasAnyRole('ROLE_STRONG', 'ROLE_WEAK')")
+    public List<EventDTO> getAllEvents(@RequestParam(defaultValue = "0") int page,
+                                       @RequestParam(defaultValue = "10") int size,
+                                       @RequestParam(defaultValue = "id") String sortBy){
+        return eventFacade.findAllEvents(PageRequest.of(page, size, Sort.by(sortBy)));
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    @PreAuthorize("hasAnyRole('ROLE_STRONG, ROLE_WEAK')")
+    @PreAuthorize("hasAnyRole('ROLE_STRONG', 'ROLE_WEAK')")
     public EventDTO getEvent(@PathVariable("id") Long id){
         return eventFacade.findEvent(id);
     }

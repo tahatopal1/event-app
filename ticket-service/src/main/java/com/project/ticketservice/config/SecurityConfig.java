@@ -26,16 +26,20 @@ public class SecurityConfig {
     }
 
     @Bean
+    public AutomationFilter automationFilter() {
+        return new AutomationFilter(restTemplate());
+    }
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(httpSecuritySessionManagementConfigurer
                         -> httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.NEVER))
                 .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)
-                .addFilterAfter(new AutomationFilter(restTemplate()), BasicAuthenticationFilter.class)
+                .addFilterAfter(automationFilter(), BasicAuthenticationFilter.class)
                 .authorizeHttpRequests(auth-> auth
-                        .requestMatchers("/api/v1/events/decrease/**").hasRole("AUTOMATION")
-                        .requestMatchers(HttpMethod.GET,"/api/v1/events/**").hasAnyRole("STRONG", "WEAK")
-                        .requestMatchers("/api/v1/events/**").hasRole("STRONG")
+                        .requestMatchers("/api/v1/admin/tickets/**").hasRole("STRONG")
+                        .requestMatchers("/api/v1/tickets/**").hasRole("WEAK")
                         .anyRequest().denyAll())
                 .httpBasic(Customizer.withDefaults())
                 .build();

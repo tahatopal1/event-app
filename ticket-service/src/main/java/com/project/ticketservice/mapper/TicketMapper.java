@@ -15,7 +15,7 @@ public class TicketMapper implements ObjectMapper<Ticket, TicketDTO> {
                 .count(ticket.getCount())
                 .totalPrice(ticket.getTotalPrice())
                 .userId(ticket.getUserId())
-                .eventId(ticket.getUserId())
+                .eventId(ticket.getEventId())
                 .isSuspended(ticket.isSuspended())
                 .build();
     }
@@ -27,7 +27,7 @@ public class TicketMapper implements ObjectMapper<Ticket, TicketDTO> {
                 .count(ticketDTO.getCount())
                 .totalPrice(ticketDTO.getTotalPrice())
                 .userId(ticketDTO.getUserId())
-                .eventId(ticketDTO.getUserId())
+                .eventId(ticketDTO.getEventId())
                 .isSuspended(ticketDTO.isSuspended())
                 .build();
     }

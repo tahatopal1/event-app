@@ -5,6 +5,7 @@ import com.project.eventservice.entity.Event;
 import com.project.eventservice.mapper.EventMapper;
 import com.project.eventservice.service.EventService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,8 +17,9 @@ public class EventFacade {
     private final EventService eventService;
     private final EventMapper eventMapper;
     
-    public List<EventDTO> findAllEvents() {
-        return eventService.findAllEvents()
+    public List<EventDTO> findAllEvents(Pageable pageable) {
+        return eventService.findAllEvents(pageable)
+                .getContent()
                 .stream()
                 .map(eventMapper::map)
                 .toList();

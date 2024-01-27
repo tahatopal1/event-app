@@ -15,7 +15,7 @@ public class TicketFilterDTO {
     private Double maxTotalPrice;
     private Long eventId;
     private Long userId;
-    private Integer page;
-    private Integer size;
+    private Integer page = 1;
+    private Integer size = 10;
 
 }

@@ -10,6 +10,8 @@ public interface TicketService {
 
     Ticket findTicket(Long id);
 
+    Ticket getTicketForUser(Long id, Long userId);
+
     Ticket saveTicket(Ticket ticket);
 
     void deleteTicket(Long id);

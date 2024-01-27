@@ -39,9 +39,14 @@ public class TicketFacade {
         return ticketMapper.map(ticket);
     }
 
+    public TicketDTO findTicketForUser(Long id) {
+        Ticket ticket = ticketService.getTicketForUser(id, GeneralUtil.getUserIdFromRequest());
+        return ticketMapper.map(ticket);
+    }
+
     public TicketDTO saveTicket(TicketDTO ticketDTO){
         Ticket ticket = ticketMapper.reverseMap(ticketDTO);
-        eventClient.decreaseAmount(ticketDTO.getUserId(), ticketDTO.getCount());
+        eventClient.decreaseAmount(ticketDTO.getEventId(), ticketDTO.getCount());
         return saveAndMap(ticket);
     }
 
@@ -55,10 +60,7 @@ public class TicketFacade {
     }
 
     public void cancelTicket(Long id) {
-        Ticket ticket = ticketService.findTicket(id);
-        if (!ticket.getUserId().equals(id)) {
-            throw new RuntimeException("Not authorized to make the change");
-        }
+        Ticket ticket = ticketService.getTicketForUser(id, GeneralUtil.getUserIdFromRequest());
         ticket.setSuspended(true);
         ticketService.saveTicket(ticket);
     }
